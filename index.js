@@ -51,7 +51,7 @@ app.use((err, req, res, next) => {
 
 // Configuration
 const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/countries_db";
+const MONGO_URI = process.env.MONGO_URI ;
 
 // Start server
 async function startServer() {
