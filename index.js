@@ -50,15 +50,13 @@ app.use((err, req, res, next) => {
 });
 
 // Configuration
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ;
 const MONGO_URI = process.env.MONGO_URI ;
 
 // Start server
 async function startServer() {
   try {
-    // Connect to MongoDB
-    // Mongoose v6+ ignores `useNewUrlParser` and `useUnifiedTopology` options
-    // so connect with the URI only. Add options later if needed (e.g. timeouts).
+   
     await mongoose.connect(MONGO_URI);
     console.log("✅ Connected to MongoDB");
 
